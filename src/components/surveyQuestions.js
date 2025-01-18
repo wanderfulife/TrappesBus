@@ -11,17 +11,23 @@ export const questions = [
     id: "origine_quartier",
     text: "Précisez le quartier",
     options: [
-      { id: 1, text: "La Plaine de Neauphle", next: "ligne_bus" },
-      { id: 2, text: "Le Village - Aérostat - Sand Pergaud Verlaine", next: "ligne_bus" },
-      { id: 3, text: "Jaurès Gare - Jean Macé", next: "ligne_bus" },
-      { id: 4, text: "Le Moulin de la Galette", next: "ligne_bus" },
-      { id: 5, text: "Les Merisiers - Farges Thorez - Cité Nouvelle", next: "ligne_bus" },
-      { id: 6, text: "La Boissière", next: "ligne_bus" }
+      { id: 1, text: "La Plaine de Neauphle", next: "destination" },
+      { id: 2, text: "Le Village - Aérostat - Sand Pergaud Verlaine", next: "destination" },
+      { id: 3, text: "Jaurès Gare - Jean Macé", next: "destination" },
+      { id: 4, text: "Le Moulin de la Galette", next: "destination" },
+      { id: 5, text: "Les Merisiers - Farges Thorez - Cité Nouvelle", next: "destination" },
+      { id: 6, text: "La Boissière", next: "destination" }
     ]
   },
   {
     id: "origine_autre",
     text: "Précisez la commune",
+    usesCommuneSelector: true,
+    next: "destination"
+  },
+  {
+    id: "destination",
+    text: "Quelle sera votre commune d’arrivée ?",
     usesCommuneSelector: true,
     next: "ligne_bus"
   },
