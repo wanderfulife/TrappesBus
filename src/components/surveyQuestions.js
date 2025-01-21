@@ -16,8 +16,15 @@ export const questions = [
       { id: 3, text: "Jaurès Gare - Jean Macé", next: "destination" },
       { id: 4, text: "Le Moulin de la Galette", next: "destination" },
       { id: 5, text: "Les Merisiers - Farges Thorez - Cité Nouvelle", next: "destination" },
-      { id: 6, text: "La Boissière", next: "destination" }
+      { id: 6, text: "La Boissière", next: "destination" },
+      { id: 7, text: "Autre", next: "origine_quartier_autre" }
     ]
+  },
+  {
+    id: "origine_quartier_autre",
+    text: "Précisez le quartier",
+    freeText: true,
+    next: "destination"
   },
   {
     id: "origine_autre",
@@ -27,7 +34,7 @@ export const questions = [
   },
   {
     id: "destination",
-    text: "Quelle sera votre commune d’arrivée ?",
+    text: "Quelle sera votre commune d'arrivée ?",
     usesCommuneSelector: true,
     next: "ligne_bus"
   },
